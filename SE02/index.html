@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS SE02</title>
+    <style>
+      .hamy:hover {
+        transform: scale(1.5);
+        transform: translateY(50px);
+        transition: all 1s;
+      }
+      .hamy {
+        transition: all 1s;
+      }
+    </style>
+  </head>
+  <body>
+    <img
+      onclick="poolBedeh()"
+      class="hamy"
+      style="width: 150px; display: block; margin: auto; cursor: pointer"
+      src="img/hamster.webp"
+      alt=""
+    />
+    <p
+      style="
+        text-align: center;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        font-weight: 900;
+        font-size: 45px;
+      "
+      id="demo"
+    ></p>
+
+    <script>
+      let walletNumberOne = 2500;
+      document.getElementById("demo").innerHTML = wallet;
+
+      function poolBedeh() {
+        wallet = wallet + 10;
+        console.log(wallet);
+        document.getElementById("demo").innerHTML = wallet;
+      }
+    </script>
+  </body>
+</html>
