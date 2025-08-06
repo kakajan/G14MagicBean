@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+      }
+      .round {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background: #48055c;
+        background: radial-gradient(
+          circle,
+          rgba(72, 5, 92, 1) 1%,
+          rgba(52, 30, 125, 1) 45%,
+          rgba(255, 255, 255, 1) 89%,
+          rgba(255, 255, 255, 1) 100%
+        );
+        cursor: pointer;
+      }
+      .round:hover {
+        background: #5c0505;
+        background: radial-gradient(
+          circle,
+          rgba(92, 5, 5, 1) 1%,
+          rgba(125, 30, 95, 1) 45%,
+          rgba(255, 255, 255, 1) 89%,
+          rgba(255, 255, 255, 1) 100%
+        );
+      }
+      .round:active {
+        background: #12b881;
+        background: radial-gradient(
+          circle,
+          rgba(18, 184, 129, 1) 1%,
+          rgba(30, 125, 109, 1) 44%,
+          rgba(255, 255, 255, 1) 89%,
+          rgba(255, 255, 255, 1) 100%
+        );
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div onclick="sharzheshKon(100)" class="round"></div>
+      <div id="screen"></div>
+    </div>
+
+
+    <script>
+        const monitor = document.querySelector('#screen');
+        let sharzh = 5000;
+        monitor.innerHTML = sharzh;
+
+        function sharzheshKon (x) {
+           sharzh += x //sharzh = sharzh + x 
+           monitor.innerHTML = sharzh
+        }
+    </script>
+  </body>
+</html>

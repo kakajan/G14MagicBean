@@ -5,24 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JS SE02</title>
     <style>
-      .hamy:hover {
+      body {
+        text-align: center;
+      }
+      .container:hover h1 {
         transform: scale(1.5);
         transform: translateY(50px);
         transition: all 1s;
       }
-      .hamy {
+      .container h1 {
         transition: all 1s;
+      }
+      .container {
+        position: relative;
+        display: inline-block;
+        margin: auto;
+      }
+      .container h1 {
+        position: absolute;
+        z-index: 1;
       }
     </style>
   </head>
   <body>
-    <img
-      onclick="poolBedeh()"
-      class="hamy"
-      style="width: 150px; display: block; margin: auto; cursor: pointer"
-      src="img/hamster.webp"
-      alt=""
-    />
+    <div class="container">
+      <h1>+10</h1>
+      <img
+        onclick="poolBedeh()"
+        class="hamy"
+        style="width: 150px; margin: auto; cursor: pointer"
+        src="img/hamster.webp"
+        alt=""
+      />
+    </div>
     <p
       style="
         text-align: center;
@@ -34,14 +49,23 @@
     ></p>
 
     <script>
-      let walletNumberOne = 2500;
+      const ten = document.querySelector('.container h1');
+      ten.style.display = 'none'
+
+      let wallet = 2500;
       document.getElementById("demo").innerHTML = wallet;
 
       function poolBedeh() {
         wallet = wallet + 10;
         console.log(wallet);
         document.getElementById("demo").innerHTML = wallet;
+        ten.style.display = 'block'
+        ten.style.fontSize = '45px'
+        setTimeout(() => {
+          ten.style.display = 'none'
+        }, 800);
       }
+
     </script>
   </body>
 </html>
