@@ -54,19 +54,22 @@
   <body>
     <div class="container">
       <div onclick="sharzheshKon(100)" class="round"></div>
-      <div id="screen"></div>
     </div>
-
+    <div id="screen" style="text-align: center"></div>
 
     <script>
-        const monitor = document.querySelector('#screen');
-        let sharzh = 5000;
-        monitor.innerHTML = sharzh;
-
-        function sharzheshKon (x) {
-           sharzh += x //sharzh = sharzh + x 
-           monitor.innerHTML = sharzh
-        }
+      const monitor = document.querySelector("#screen");
+      let sharzh = 5000;
+      monitor.innerHTML = sharzh;
+      let myFN = (s) => {
+        alert(s);
+        sharzheshKon(100);
+      };
+      myFN(45);
+      function sharzheshKon(x) {
+        sharzh += x; //sharzh = sharzh + x
+        monitor.innerHTML = `شارژ شما: ${sharzh} است`;
+      }
     </script>
   </body>
 </html>
