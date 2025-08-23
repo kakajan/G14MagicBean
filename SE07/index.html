@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS SE07</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-200">
+    <h1
+      class="mt-[calc(150px/3)] bg-amber-300 border border-red-600 rounded-lg p-4 w-[50%] m-auto"
+    >
+      Welcome to <span class="text-black font-black text-lg appName">JS</span>
+    </h1>
+    <div class="flex gap-4 justify-center mx-20 mt-5">
+        <div class="w-1/2 bg-gray-350 border-gray-500 border rounded-2xl shadow-2xl p-6">
+            <input class="block w-full rounded-xl text-lg font-black text-center debtIn" type="tel">
+            <button onclick="setDebt()" class="w-full bg-pink-600 text-white rounded-xl mt-4 setDebt">Set Debt</button>
+        </div>
+        <div class="w-1/2 bg-gray-350 border-gray-500 border rounded-2xl shadow-2xl p-6">
+           <input class="block w-full rounded-xl text-lg font-black text-center creditIn" type="tel">
+            <button onclick="setCredit()" class="w-full bg-cyan-600 text-white rounded-xl mt-4 setCredit">Set Credit</button>
+        </div>
+    </div>
+    <div class="text-center font-black text-[90px] mt-8 text-gray-800 balance"></div>
+
+    <script src="assets/data.js"></script>
+    <script src="assets/initializtion.js"></script>
+    <script src="assets/app.js"></script>
+  </body>
+</html>
